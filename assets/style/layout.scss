@@ -1,0 +1,221 @@
+@import './variables.scss';
+
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 4px; 
+    height: 4px; 
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $color3; 
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1; 
+}
+
+scrollbar {
+    width: 4px; 
+}
+
+scrollbar-thumb {
+    background-color: $color3; 
+}
+
+@media(max-width: 520px){
+    ::-webkit-scrollbar {
+        width: 5px; 
+        height: 5px; 
+    }
+
+    scrollbar {
+        width: 5px; 
+    }
+}
+
+button:focus {
+    outline: none; 
+}
+
+.no-transition {
+    transition: none !important;
+}
+
+
+.hidden{
+    display: none;
+}
+
+.upcase{
+    text-transform: uppercase;
+}
+
+
+@font-face {
+    font-family: 'RedHat';
+    src: url('../fonts/RedHatDisplay/RedHatDisplay-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'RedHat-semibold';
+    src: url('../fonts/RedHatDisplay/RedHatDisplay-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'RedHat-bold';
+    src: url('../fonts/RedHatDisplay/RedHatDisplay-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Versatylo';
+    src: url('../fonts/VersatyloRounded/VersatyloRounded.ttf');
+}
+
+.font1{
+    font-family: 'RedHat';
+}
+
+.font1-semibold{
+    font-family: 'RedHat-semibold';
+}
+
+.font1-bold{
+    font-family: 'RedHat-bold';
+}
+
+.font2{
+    font-family: 'Versatylo';
+}
+
+.container{
+    max-width: 1318px;
+    margin: auto;
+    font-family: 'RedHat';
+
+    .home_head{
+        margin-top: 100px;
+        font-size: 40px;
+        display: flex;
+        justify-content: center;
+        text-transform: uppercase;
+    }
+
+    @media(max-width:520px){
+        .home_head{
+            margin-top: 40px;
+            font-size: 24px;
+            display: flex;
+            justify-content: center;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.align-center{
+    display: flex;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+.heart{
+    cursor: pointer;
+}
+
+button, label{
+    cursor: pointer;
+}
+
+.o-auto{
+    width: 100%;
+    overflow: auto;
+}
+
+.wd-100{
+    width: 100%;
+}
+
+.pd-20{
+    padding: 20px;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-col{
+    display: flex;
+    flex-direction: column;
+}
+
+head-text{
+    font-size: 22px;
+    font-weight: 600;
+    color: $color3;
+}
+
+sec-head{
+    font-size: 20px;
+    font-weight: 600;
+    color: $color3;
+}
+
+page-divider{
+    margin: 20px 0;
+}
+
+//responsive utility css
+
+//margin top in pexel
+.mgt_40{
+    margin-top: 40px;
+}
+
+.mgt_20{
+    margin-top: 20px;
+}
+
+//Margin Bottom
+.mgb_100{
+  margin-bottom: 100px;
+}
+
+//Margin left
+.mgl_20{
+  margin-left: 20px;
+}
+
+.mgl_40{
+    margin-left: 40px;
+  }
+
+
+
+
+@media(max-width:1300px){
+    .container{
+        padding: 20px;
+    }
+}
+
+@media(max-width:520px){
+    .container{
+        padding: 0px;
+    }
+
+    .n_520{
+        display: none;
+    }
+}

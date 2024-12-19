@@ -1,0 +1,13 @@
+.quantitybtn {
+  display: flex;
+  flex-direction: row;
+}
+.quantitybtn input {
+  width: 18px;
+  border: none;
+  text-align: center;
+}
+.quantitybtn button {
+  border: none;
+  background: gre;
+}/*# sourceMappingURL=quantitybtn.css.map */

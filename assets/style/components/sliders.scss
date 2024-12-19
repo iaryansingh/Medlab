@@ -1,0 +1,145 @@
+//Testimonial
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    font-size: 40px;
+    padding: 0 35px;
+    align-items: center;
+    justify-content: center;
+
+    >p{
+        color: $color3;
+        font-weight: 600;
+    }
+
+    .wrapper {
+        max-width: 1200px;
+        width: 100%;
+        position: relative;
+
+        .btn_move {
+            top: 50%;
+            height: 50px;
+            width: 50px;
+            cursor: pointer;
+            font-size: 1.25rem;
+            position: absolute;
+            text-align: center;
+            line-height: 65px;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+            transform: translateY(-50%);
+            transition: transform 0.1s linear;
+
+            &:active {
+                transform: translateY(-50%) scale(0.85);
+            }
+
+            &:first-child {
+                left: -32px;
+            }
+
+            &:last-child {
+                right: -32px;
+            }
+        }
+
+        .carousel {
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-columns: calc((30%) - 12px);
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+            gap: 60px;
+            border-radius: 8px;
+            padding: 100px 0;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            &.no-transition {
+                scroll-behavior: auto;
+            }
+
+            &.dragging {
+                scroll-snap-type: none;
+                scroll-behavior: auto;
+
+                .card {
+                    cursor: grab;
+                    user-select: none;
+                }
+            }
+
+            :where(.card, .img) {
+                display: flex;
+                align-items: center;
+            }
+           
+
+            .card {
+                padding: 40px 20px 20px 20px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                scroll-snap-align: start;
+                list-style: none;
+                background: #fff;
+                cursor: pointer;
+                padding-bottom: 15px;
+                flex-direction: column;
+                border-radius: 8px;
+                margin: 30px auto;
+                display: flex;
+                width: 90%;
+
+                .img {
+                    height: 148px;
+                    width: 148px;
+                    border-radius: 50%;
+
+                    img {
+                        width: 125px;
+                        height: 125px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                        margin-bottom: 220px;
+                    }
+                }
+
+                .desc{
+                    font-size: 14px;
+                    margin-top: -50px;
+                    margin-bottom: 50px;
+                }
+
+                .writer{
+                    font-size: 20px;
+                    color: $color3;
+                    margin-bottom: 50px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    .testimonial{
+        .wrapper .carousel {
+            grid-auto-columns: calc((100% / 2) - 9px);
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .testimonial{
+        .wrapper .carousel {
+            grid-auto-columns: 100%;
+        }
+    }
+   
+}

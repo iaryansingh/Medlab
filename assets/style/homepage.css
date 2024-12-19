@@ -1,0 +1,129 @@
+.color3 {
+  color: #1D2AA3;
+}
+
+.featuredbrand {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.featuredbrand img {
+  width: 228px;
+  margin: 10px;
+}
+
+.appsection {
+  margin: 100px 0;
+  padding: 20px 0;
+  background: #EFEFEF;
+}
+.appsection .container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1100px;
+}
+.appsection .container .app_img {
+  width: 50%;
+}
+.appsection .container .app_img > img {
+  width: 50%;
+}
+.appsection .container .app_download {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  text-align: center;
+}
+.appsection .container .app_download p:nth-child(1) {
+  font-size: 60px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #1D2AA3;
+  text-align: left;
+}
+.appsection .container .app_download p:nth-child(2) {
+  font-size: 22px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.appsection .container .app_download .appstore {
+  margin-top: 40px;
+}
+.appsection .container .app_download .appstore img {
+  width: 40%;
+  margin-right: 20px;
+}
+
+@media (max-width: 520px) {
+  .appsection .container {
+    flex-direction: row;
+    justify-content: center;
+    padding: 30px;
+  }
+  .appsection .container .app_img {
+    width: 50%;
+    display: flex;
+    margin: auto;
+  }
+  .appsection .container .app_img img {
+    width: 100%;
+  }
+  .appsection .container .app_download {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+  }
+  .appsection .container .app_download p:nth-child(1) {
+    font-size: 18px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    color: #1D2AA3;
+  }
+  .appsection .container .app_download p:nth-child(2) {
+    font-size: 11px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .appsection .container .app_download .appstore {
+    margin-top: 40px;
+  }
+  .appsection .container .app_download .appstore img {
+    width: 100%;
+    margin: 10px;
+  }
+}
+.moveBtn {
+  position: relative;
+}
+.moveBtn > button {
+  position: absolute;
+  bottom: 250px;
+  border: none;
+  background: transparent;
+}
+.moveBtn > button:nth-child(1) {
+  left: -30px;
+  width: 200px;
+}
+.moveBtn > button:nth-child(2) {
+  right: -30px;
+  width: 200px;
+}
+
+@media (max-width: 500px) {
+  .featuredbrand {
+    padding: 10px;
+    margin: auto;
+    justify-content: center;
+  }
+  .featuredbrand img {
+    width: 105px;
+    margin: 8px;
+  }
+}/*# sourceMappingURL=homepage.css.map */

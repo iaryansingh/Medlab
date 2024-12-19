@@ -1,0 +1,42 @@
+//Layout and Header & Footer
+@import './components/header.scss';
+@import './components/footer.scss';
+@import './layout.scss';
+@import './variables.scss';
+
+//Sections
+@import './components/brands.scss';
+@import './components/hero-slider.scss';
+@import './components/hero-banner.scss';
+@import './components/sliders.scss';
+@import './components/categories.scss';
+@import './components/modelbox.scss';
+
+@import './product.scss';
+@import './checkout.scss';
+@import './cart.scss';
+
+//Pages
+@import './homepage.scss';
+@import './productdetail.scss';
+@import './signin.scss';
+@import './wishlist.scss';
+@import './accountdashboard/profiledashboard.scss';
+@import './accountdashboard/subuser.scss';
+@import './accountdashboard/quotation.scss';
+@import './accountdashboard/orderhistory.scss';
+@import './accountdashboard/setting.scss';
+
+@import './productcategory.scss';
+@import './blogs/allblog.scss';
+@import './blogs/singleblog.scss';
+
+//Page Components
+@import './components/accordian.scss';
+@import './components/quantitybtn.scss';
+@import './components/breadcrum.scss';
+@import './components/tagelements.scss';
+@import './components/input.scss';
+@import './components/switch.scss';
+@import './components/customselect.scss';
+@import './components/scrolltop.scss';

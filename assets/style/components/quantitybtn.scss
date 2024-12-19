@@ -1,0 +1,58 @@
+.quantitybtn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 2px solid $grey2;
+    border-radius: 12px;
+    padding: 5px;
+    color: $color3;
+
+    input{
+        width: 18px;
+        border: none;
+        text-align: center;
+        color: $color3;
+    }
+    
+    button{
+        border: none;
+        background: $grey2;
+        padding: 2px;
+        border-radius: 8px;
+        width: 25px;
+        font-size: 19px;
+        transition: .3s ease-in;
+        color: $color3;
+
+        &:hover{
+            background: darken($grey2, 5%);
+        }
+    }
+}
+
+
+@media (max-width:500px){
+    .quantitybtn{
+        display: flex;
+        flex-direction: row;
+        border: 2px solid $grey2;
+        border-radius: 100px;
+        padding: 2px;
+       
+    
+        input{
+            width: 15px;
+            border: none;
+            text-align: center;
+        }
+        
+        button{
+            border: none;
+            background: #f2f2f2;
+            padding: 2px;
+            border-radius: 20px;
+            width: 15px;
+            font-size: 18px;
+        }
+    }
+}

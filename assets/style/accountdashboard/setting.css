@@ -1,0 +1,141 @@
+.color3 {
+  color: #1D2AA3;
+}
+
+.setting_container {
+  padding: 20px;
+}
+.setting_container sec-head {
+  margin-bottom: 20px;
+  color: black;
+}
+.setting_container input {
+  border: 2px solid #F2F2F2;
+}
+.setting_container .wd_30 {
+  max-width: 30%;
+}
+.setting_container .wd_50 {
+  max-width: 45%;
+}
+.setting_container .setting_sec1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.setting_container .setting_sec1 .input_box {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  order: 1;
+}
+.setting_container .setting_sec1 .profile_img {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  order: 2;
+}
+.setting_container .setting_sec1 .profile_img img {
+  width: 200px;
+  border-radius: 100px;
+  margin-top: 50px;
+}
+.setting_container .setting_sec1 .profile_img .chooseimgbtn {
+  border: 2px solid #1D2AA3;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  padding: 8px 20px;
+  color: #1D2AA3;
+  margin-top: 20px;
+}
+.setting_container .setting_sec3 .input_rows .input_group {
+  max-width: 45%;
+}
+.setting_container .input_rows {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.saveChangebtn {
+  display: flex;
+  justify-content: space-between;
+}
+.saveChangebtn > button {
+  color: white;
+  background: #1D2AA3;
+  border-radius: 5px;
+  padding: 10px 20px;
+  border: none;
+}
+.saveChangebtn > button:hover {
+  background: #2130b9;
+}
+
+.setting_list {
+  display: flex;
+  flex-direction: row;
+  flex-direction: column;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+@media (min-width: 1000px) {
+  .setting_container {
+    width: 100%;
+  }
+}
+@media (max-width: 520px) {
+  .setting_container .wd_30 {
+    max-width: 100%;
+  }
+  .setting_container .wd_50 {
+    max-width: 100%;
+  }
+  .setting_container .setting_sec1 {
+    display: flex;
+    flex-direction: column;
+  }
+  .setting_container .setting_sec1 .input_box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    order: 2;
+  }
+  .setting_container .setting_sec1 .profile_img {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    order: 1;
+  }
+  .setting_container .setting_sec1 .profile_img img {
+    width: 150px;
+    border-radius: 100px;
+    margin-top: 50px;
+  }
+  .setting_container .setting_sec1 .profile_img .chooseimgbtn {
+    border: 2px solid #1D2AA3;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    padding: 5px 15px;
+    color: #1D2AA3;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  .setting_container .setting_sec3 .input_rows .input_group {
+    max-width: 100%;
+  }
+}/*# sourceMappingURL=setting.css.map */

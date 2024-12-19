@@ -1,0 +1,48 @@
+
+$color1: #B69C6F;
+$color2: #368EBC;
+$color3: #1D2AA3;
+$color4:#3DD9CF;
+$color5: #2A62AF;
+
+$grey1:#999999 ;
+$grey2:#F2F2F2;
+$grey3: #808080;
+$grey4: #535353;
+
+$colorwhite: #ffffff;
+$maingradient: linear-gradient(86deg, #1D2AA3 0.01%, #3DD9CF 99.99%);
+
+$background-color: #dee2f6;
+$box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+$container-width: 1318px;
+
+@mixin max-width {
+ max-width: 1400px;
+}
+
+@mixin center-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @mixin flex-row {
+   display: flex;
+   flex-direction: row;
+  }
+
+   @mixin flex-col {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  //Utility classes
+
+  .color3{
+    color: $color3;
+  }
+
+
+  

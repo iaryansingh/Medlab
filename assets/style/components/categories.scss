@@ -1,0 +1,62 @@
+@import '../variables.scss';
+
+.categories{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: center;
+
+    .category_col{
+       text-align: center;
+       color: $color3;
+
+        >img{
+            width: 250px;
+            margin: 10px;
+            border-radius: 10px;
+            border: 0.809px solid var(--zooz-linear-color-2, #3DD9CF);
+        }
+
+        >p{
+            line-height: 150%;
+            font-size: 20px;
+        }
+    }
+}
+
+
+@media(max-width:820px){
+    .categories{
+    
+        .category_col{
+    
+            >img{
+                width: 265px;
+            }
+        }
+    }   
+}
+
+@media(max-width:520px){
+    .categories{
+        justify-content: center;
+        margin: auto;
+
+        .category_col{
+            width: 90%;
+            margin: auto;
+
+            >p{
+                font-size: 18px;
+                margin: 10px auto;
+            }
+            >img{
+                width: 100%;
+                margin: 0px;
+                border-radius: 10px;
+                border: 0.809px solid var(--zooz-linear-color-2, #3DD9CF);
+            }
+        }
+    }   
+}

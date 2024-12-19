@@ -1,0 +1,483 @@
+@import '../variables.scss';
+
+@mixin border-shadow {
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+   }
+
+   @mixin flex-row{
+    display: flex;
+    flex-direction: row;
+   }
+
+   @mixin flex-col{
+    display: flex;
+    flex-direction: column;
+   }
+
+
+.account_dashboard{
+    @include flex-row;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+    button{
+        border: none;
+        background: transparent
+    }
+
+        .navigation {
+            @include border-shadow;
+            width: 300px;
+            margin-right: 20px;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            padding-bottom: 20px;
+            position: sticky;
+            top: 0;
+
+            .cevron-down{
+                display: none;
+            }
+
+            .nav_head{
+                @include flex-row;
+                justify-content: space-between;
+                padding: 20px 20px 0 20px;
+                >p{
+                    font-size: 20px;
+                }
+            }
+
+            ul{
+                margin-top: 20px;
+            }
+
+            .show_dashnav{
+                display: block;
+            }
+
+            .selected{
+                background: #EFF3FA;
+                color: $color3;
+                border-left: 3px solid $color3;
+            }
+    
+            li {
+                @include flex-row;
+                   padding: 15px 20px;
+                   color: #666666;
+                   cursor: pointer;
+
+                >p {
+                    margin-left: 10px;
+                }
+
+                &:hover{
+                    background: #EFF3FA;
+                    color: $color3;
+                }
+            }
+    
+        }
+
+    .account_details{
+        @include flex-row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .namebox{
+            @include border-shadow;
+            @include flex-col;
+
+            padding: 20px;
+            margin-top: 20px;
+            justify-content: center;
+            width: 49%;
+            align-items: center;
+
+            img{
+                // width: 100px;
+                height: 100px;
+                width: auto;
+            }
+
+            .name{
+                font-size: 18px;
+            }
+
+            .role{
+                font-size: 12px;
+                color: $grey3;
+            }
+
+            img{
+                border-radius: 50px;
+            }
+
+            >p{
+                display: flex;
+                margin-bottom: 10px;
+            }
+
+            >button{
+                font-size: 16px;
+            }
+        }
+
+        .billaddress{
+            margin-top: 20px;
+            @include border-shadow;
+            width: 40%;
+            padding: 20px;
+            font-size: 16px;
+            
+            p:nth-child(1) {
+                color: $grey3;
+                font-size: 14px;
+                margin-bottom: 15px;
+            }
+
+            p:nth-child(2) {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+
+            p:nth-child(3) {
+                color: $grey3;
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+
+            p:nth-child(4) {
+                margin-bottom: 10px;
+            }
+
+            p:nth-child(5) {
+                margin-bottom: 10px;
+            }
+
+          >button {
+                margin-bottom: 10px;
+                font-size: 16px;
+                text-align: left;
+            }   
+        }
+    }
+
+    .user_history {
+        @include border-shadow;
+        width: 100%; 
+        margin-top: 20px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        // margin: 0 20px;
+    
+        .order_head {
+            @include flex-row;
+            justify-content: space-between;
+            padding-bottom: 20px;
+    
+            p:nth-child(1) {
+                font-size: 20px;
+            }
+    
+            .btn-b {
+                color: $color3;
+                font-size: 16px;
+            }
+        }
+    
+        table {
+            width: 100%; 
+            text-align: left;
+            border-collapse: collapse;
+            border-spacing: 0;
+            white-space: nowrap;
+    
+            .table-head {
+                color: #4D4D4D;
+                background: $grey2;
+                font-size: 12px;
+                height: 36px;
+            }
+    
+            tr {
+                td {
+                    color: #333333;
+                    height: 45px;
+                    font-size: 14px;
+                }
+    
+                .viewbtn {
+                    color: $color3;
+                }
+            }
+        }
+    
+    }
+    
+}
+
+//Bulk order Page
+.account_dashboard {
+    .bulkorder_upoload {
+        margin-top: 20px;
+        border: 2px solid $color3;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        height: 300px;
+        width: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        align-items: center;
+        background: #EFEFEF;
+
+        .uploadlabel {
+            background: $color3;
+            color: white;
+            border-radius: 5px;
+            font-size: 16px;
+            padding: 10px 25px;
+            font-weight: 400;
+            margin-bottom: 10px;
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+
+            &:hover {
+                background: darken($color3, 5%);
+            }
+
+            svg{
+                align-items: center;
+            }
+        }
+
+        >p {
+            font-size: 14px;
+        }
+    }
+}
+
+//Invoice page
+.invoice_container{
+    width: 100%;
+    button{
+        border: 2px solid $color3;
+        color: $color3;
+        border-radius: 8px;
+        padding: 10px 20px;
+    }
+
+    .selected{
+        background: $color3;
+        color: white;
+    }
+
+    .searchinput{
+        border: 2px solid $color3;
+        border-radius: 8px;
+        height: 38px;
+        width: 250px;
+        padding-left: 10px;
+
+        &::placeholder{
+            color: $color3;
+        }
+    }
+
+
+    >div{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .invoicebtns{
+        button{
+            width: 40%;
+        }
+    }
+
+    .ordercount{
+        div{
+            background-color: $grey2;
+            margin: 10px;
+            border-radius: 10px;
+            padding: 20px 40px;
+            text-align: center;
+            width: 20%;
+        }  
+    }
+
+    table {
+        width: 100%; 
+        text-align: left;
+        border-collapse: collapse;
+        border-spacing: 0;
+        white-space: nowrap;
+
+        .table-head {
+            color: #4D4D4D;
+            background: $grey2;
+            font-size: 12px;
+            height: 36px;
+        }
+
+        tr {
+            th{
+                padding: 0 5px;
+            }
+            td {
+                color: #333333;
+                height: 45px;
+                font-size: 14px;
+                padding: 0 5px;
+            }
+
+            .viewbtn {
+                color: $color3;
+            }
+        }
+    }
+}
+
+
+// invoice container
+@media(max-width:820px) {
+
+    .account_dashboard {
+        .navigation{
+            display: none;
+        }
+    }
+
+
+    .invoice_container{
+        margin: 20px;
+        max-width: 90%;
+
+        .searchinput{
+            width: 200px;
+            height: 100;
+        }
+    
+        .ordercount{
+            div{
+                background-color: $grey2;
+                margin: 10px;
+                border-radius: 10px;
+                padding: 20px 40px;
+                text-align: center;
+                width: 18%;
+                font-size: 12px;
+            }  
+        }
+    }  
+}
+
+@media(max-width:520px) {
+    .invoice_container{
+        margin: 20px;
+
+        .ordercount{
+            div{
+                background-color: $grey2;
+                margin: 10px;
+                border-radius: 10px;
+                padding: 20px 40px;
+                text-align: center;
+                width: 100%;
+                font-size: 12px;
+            }  
+        }
+
+        .invoicebtns{
+            button{
+                width: 45%;
+            }
+        }
+    }
+    
+}
+
+
+
+@media(max-width:820px) {
+    .account_dashboard {
+        flex-direction: column;
+
+        .navigation {
+            width: 95%;
+            margin: auto;
+            .cevron-down{
+                display: block;
+            }
+
+            .nav_head {
+                padding: 20px;
+                cursor: pointer;
+            }
+
+            ul {
+                display: none;
+            }
+        }
+
+        .account_details {
+            flex-direction: column;
+
+            .namebox {
+                width: 85%;
+                display: flex;
+                margin: 10px auto;
+            }
+
+            .billaddress {
+                width: 85%;
+                display: flex;
+                flex-direction: column;
+                margin: 10px auto;
+            }
+        }
+
+        .user_history{
+            width: 85%;
+            margin: auto;
+            
+            table {
+    
+                tr{
+                    th{
+                        padding: 0 10px;
+                    }
+
+                    td{
+                        font-size: 12px;
+                        padding: 0 10px;
+                    }
+                    .viewbtn {
+                        color: #1D2AA3;
+                        padding-left: 9px;
+                    }
+                }
+            }
+        }
+
+        //Bulk order Page
+        .bulkorder_upoload {
+            height: 300px;
+            width: 80%;
+            margin-top: 50px;
+        }
+    }
+}

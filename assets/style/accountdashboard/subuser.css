@@ -1,0 +1,70 @@
+.color3 {
+  color: #1D2AA3;
+}
+
+.subuser_container {
+  padding: 20px;
+}
+
+.crum_adduserBtn {
+  display: flex;
+  justify-content: space-between;
+}
+.crum_adduserBtn > button {
+  color: white;
+  background: #1D2AA3;
+  border-radius: 5px;
+  padding: 10px 20px;
+  border: none;
+}
+.crum_adduserBtn > button:hover {
+  background: #2130b9;
+}
+
+.Subuser_list {
+  display: flex;
+  flex-direction: row;
+  flex-direction: column;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 20px;
+  border-radius: 10px;
+}
+.Subuser_list sec-head {
+  margin-bottom: 20px;
+  color: black;
+}
+.Subuser_list table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  border-spacing: 0;
+  white-space: nowrap;
+}
+.Subuser_list table .table-head {
+  color: #4D4D4D;
+  background: #F2F2F2;
+  font-size: 12px;
+  height: 36px;
+}
+.Subuser_list table tr th {
+  padding: 0 5px;
+}
+.Subuser_list table tr td {
+  color: #333333;
+  height: 45px;
+  font-size: 14px;
+  padding: 0 5px;
+}
+.Subuser_list table tr .viewBtn {
+  color: white;
+  background: #1D2AA3;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+@media (min-width: 1000px) {
+  .subuser_container {
+    width: 100%;
+  }
+}/*# sourceMappingURL=subuser.css.map */

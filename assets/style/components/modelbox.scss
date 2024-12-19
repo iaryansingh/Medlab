@@ -1,0 +1,33 @@
+@import '../variables.scss';
+
+.orderplaced{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 300px;
+    margin: 30px auto;
+
+
+    .text_big{
+        font-size: 30px;
+        margin: 20px 0;
+        color: $color3;
+    }
+    
+    .ordernumber{
+        color: $color3;
+        margin: 25px 0;
+    }
+
+    .check_btn{
+        border: none;
+        background: $color3;
+        border-radius: 5px;
+        padding: 10px 20px;
+        color: white;
+        margin-top: 20px;
+    }
+
+}

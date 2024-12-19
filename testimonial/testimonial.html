@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonial Carousel</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .testimonial_sec {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 50px 20px;
+            position: relative;
+            background: #fff;
+            overflow: hidden;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #0047ab;
+            margin-bottom: 30px;
+        }
+
+        .testimonial_wrapper {
+            display: flex;
+            position: relative;
+            transition: transform 0.5s ease-in-out;
+            will-change: transform;
+        }
+
+        .Testimonial {
+            width: 300px;
+            flex-shrink: 0;
+            padding: 20px;
+            text-align: center;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transform: scale(0.8);
+            opacity: 0.5;
+            transition: transform 0.5s, opacity 0.5s;
+        }
+
+        .Testimonial.active {
+            transform: scale(1.1);
+            opacity: 1;
+            border: 2px solid #0047ab;
+        }
+
+        .Testimonial > img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            border: 3px solid #0047ab;
+        }
+
+        .Testimonial p {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .writer {
+            font-size: 16px;
+            font-weight: bold;
+            color: #0047ab;
+        }
+
+        .moveBtn {
+            margin-top: 20px;
+        }
+
+        .moveBtn button {
+            background: #0047ab;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .moveBtn button:hover {
+            background: #002c6e;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="testimonial_sec">
+        <h2>TESTIMONIALS</h2>
+        <div class="testimonial_wrapper">
+            <div class="Testimonial">
+                <img src="https://via.placeholder.com/80" alt="Testimonial 1">
+                <p>“Lorem ipsum dolor sit amet consectetur. Magna posuere lorem mi quam blandit auctor ornare odio.”</p>
+                <p class="writer">Jane Cooper</p>
+            </div>
+            <div class="Testimonial">
+                <img src="https://via.placeholder.com/80" alt="Testimonial 2">
+                <p>“Lorem ipsum dolor sit amet consectetur. Magna posuere lorem mi quam blandit auctor ornare odio.”</p>
+                <p class="writer">Leslie Alexander</p>
+            </div>
+            <div class="Testimonial">
+                <img src="https://via.placeholder.com/80" alt="Testimonial 3">
+                <p>“Lorem ipsum dolor sit amet consectetur. Magna posuere lorem mi quam blandit auctor ornare odio.”</p>
+                <p class="writer">Jenny Wilson</p>
+            </div>
+        </div>
+        <div class="moveBtn">
+            <button id="prevBtn">Previous</button>
+            <button id="nextBtn">Next</button>
+        </div>
+    </div>
+
+    <script>
+        const wrapper = document.querySelector('.testimonial_wrapper');
+        const testimonials = Array.from(document.querySelectorAll('.Testimonial'));
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        let index = 0;
+
+        // Clone the first and last testimonial for infinite scrolling
+        const firstClone = testimonials[0].cloneNode(true);
+        const lastClone = testimonials[testimonials.length - 1].cloneNode(true);
+        wrapper.insertBefore(lastClone, testimonials[0]);
+        wrapper.appendChild(firstClone);
+
+        // Update active class
+        function updateActiveClass() {
+            const allTestimonials = Array.from(wrapper.children);
+            allTestimonials.forEach((testimonial, i) => {
+                testimonial.classList.remove('active');
+                if (i === index) {
+                    testimonial.classList.add('active');
+                }
+            });
+        }
+
+        // Move to the next testimonial
+        function moveNext() {
+            index++;
+            wrapper.style.transition = 'transform 0.5s ease-in-out';
+            wrapper.style.transform = `translateX(-${index * 320}px)`;
+
+            // Reset to first after transition
+            setTimeout(() => {
+                if (index >= testimonials.length + 1) {
+                    wrapper.style.transition = 'none';
+                    index = 1;
+                    wrapper.style.transform = `translateX(-${index * 320}px)`;
+                }
+            }, 500);
+
+            updateActiveClass();
+        }
+
+        // Move to the previous testimonial
+        function movePrev() {
+            index--;
+            wrapper.style.transition = 'transform 0.5s ease-in-out';
+            wrapper.style.transform = `translateX(-${index * 320}px)`;
+
+            // Reset to last after transition
+            setTimeout(() => {
+                if (index <= 0) {
+                    wrapper.style.transition = 'none';
+                    index = testimonials.length;
+                    wrapper.style.transform = `translateX(-${index * 320}px)`;
+                }
+            }, 500);
+
+            updateActiveClass();
+        }
+
+        // Add event listeners
+        prevBtn.addEventListener('click', movePrev);
+        nextBtn.addEventListener('click', moveNext);
+
+        // Initialize active class
+        updateActiveClass();
+    </script>
+</body>
+</html>

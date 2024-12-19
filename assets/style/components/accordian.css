@@ -1,0 +1,9 @@
+.accordian {
+  width: 100%;
+  padding: 20px;
+}
+.accordian div:nth-child(1) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}/*# sourceMappingURL=accordian.css.map */

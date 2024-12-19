@@ -1,0 +1,62 @@
+.accord_contain{
+    margin: 20px;
+    padding: 20px;
+    max-width: 1318px;
+    display: flex;
+    flex-direction: column;
+    margin: 40px auto;
+}
+
+head-text{
+    margin-bottom: 20px;
+}
+
+.accordian {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+
+    div:nth-child(1) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background: $grey2;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+
+        p {
+            font-weight: 600;
+        }
+
+        span {
+            background: #ffffff;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            width: 25px;
+            margin-right: 10px;
+            color: grey;
+            font-weight: 600;
+        }
+    }
+
+    .desc {
+        padding: 0 10px;
+        margin-top: -11px;
+        margin-bottom: 10px;
+        border-radius: 0 0 5px 5px;
+        background: $grey2;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease, padding 0.5s ease;
+    }
+
+    /* When .desc is expanded */
+    .desc.show {
+        max-height: 500px;
+        padding: 10px;
+    }
+}

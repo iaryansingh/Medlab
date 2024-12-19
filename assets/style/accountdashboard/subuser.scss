@@ -1,0 +1,81 @@
+
+@import '../variables.scss';
+
+.subuser_container{
+    // width: 95%;
+    padding: 20px;
+}
+
+.crum_adduserBtn{
+    display: flex;
+    justify-content: space-between;
+
+    >button{
+        color: white;
+        background: $color3;
+        border-radius: 5px;
+        padding: 10px 20px;
+        border: none;
+
+        &:hover{
+            background: lighten($color3, 5%);
+        }
+    }
+}
+
+
+
+.Subuser_list{
+    @include flex-row;
+    flex-direction: column;
+    margin: 20px auto;
+    box-shadow: $box-shadow;
+    padding: 20px;
+    border-radius: 10px;
+
+    sec-head{
+        margin-bottom: 20px;
+        color: black;
+    }
+   
+    table {
+        width: 100%; 
+        text-align: left;
+        border-collapse: collapse;
+        border-spacing: 0;
+        white-space: nowrap;
+    
+        .table-head {
+            color: #4D4D4D;
+            background: $grey2;
+            font-size: 12px;
+            height: 36px;
+        }
+    
+        tr {
+            th{
+                padding: 0 5px;
+            }
+            td {
+                color: #333333;
+                height: 45px;
+                font-size: 14px;
+                padding: 0 5px;
+            }
+    
+            .viewBtn {
+                color: white;
+                background: $color3;
+                border-radius: 5px;
+                padding: 5px 10px;
+            }
+        }
+    }
+}
+
+@media(min-width: 1000px){
+    .subuser_container{
+        width: 100%;
+    }
+    
+}

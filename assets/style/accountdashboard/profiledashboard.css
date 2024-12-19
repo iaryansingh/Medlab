@@ -1,0 +1,381 @@
+.color3 {
+  color: #1D2AA3;
+}
+
+.account_dashboard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.account_dashboard button {
+  border: none;
+  background: transparent;
+}
+.account_dashboard .navigation {
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin-right: 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-bottom: 20px;
+  position: sticky;
+  top: 0;
+}
+.account_dashboard .navigation .cevron-down {
+  display: none;
+}
+.account_dashboard .navigation .nav_head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 20px 0 20px;
+}
+.account_dashboard .navigation .nav_head > p {
+  font-size: 20px;
+}
+.account_dashboard .navigation ul {
+  margin-top: 20px;
+}
+.account_dashboard .navigation .show_dashnav {
+  display: block;
+}
+.account_dashboard .navigation .selected {
+  background: #EFF3FA;
+  color: #1D2AA3;
+  border-left: 3px solid #1D2AA3;
+}
+.account_dashboard .navigation li {
+  display: flex;
+  flex-direction: row;
+  padding: 15px 20px;
+  color: #666666;
+  cursor: pointer;
+}
+.account_dashboard .navigation li > p {
+  margin-left: 10px;
+}
+.account_dashboard .navigation li:hover {
+  background: #EFF3FA;
+  color: #1D2AA3;
+}
+.account_dashboard .account_details {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.account_dashboard .account_details .namebox {
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin-top: 20px;
+  justify-content: center;
+  width: 49%;
+  align-items: center;
+}
+.account_dashboard .account_details .namebox img {
+  height: 100px;
+  width: auto;
+}
+.account_dashboard .account_details .namebox .name {
+  font-size: 18px;
+}
+.account_dashboard .account_details .namebox .role {
+  font-size: 12px;
+  color: #808080;
+}
+.account_dashboard .account_details .namebox img {
+  border-radius: 50px;
+}
+.account_dashboard .account_details .namebox > p {
+  display: flex;
+  margin-bottom: 10px;
+}
+.account_dashboard .account_details .namebox > button {
+  font-size: 16px;
+}
+.account_dashboard .account_details .billaddress {
+  margin-top: 20px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 40%;
+  padding: 20px;
+  font-size: 16px;
+}
+.account_dashboard .account_details .billaddress p:nth-child(1) {
+  color: #808080;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.account_dashboard .account_details .billaddress p:nth-child(2) {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.account_dashboard .account_details .billaddress p:nth-child(3) {
+  color: #808080;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.account_dashboard .account_details .billaddress p:nth-child(4) {
+  margin-bottom: 10px;
+}
+.account_dashboard .account_details .billaddress p:nth-child(5) {
+  margin-bottom: 10px;
+}
+.account_dashboard .account_details .billaddress > button {
+  margin-bottom: 10px;
+  font-size: 16px;
+  text-align: left;
+}
+.account_dashboard .user_history {
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin-top: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.account_dashboard .user_history .order_head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+.account_dashboard .user_history .order_head p:nth-child(1) {
+  font-size: 20px;
+}
+.account_dashboard .user_history .order_head .btn-b {
+  color: #1D2AA3;
+  font-size: 16px;
+}
+.account_dashboard .user_history table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  border-spacing: 0;
+  white-space: nowrap;
+}
+.account_dashboard .user_history table .table-head {
+  color: #4D4D4D;
+  background: #F2F2F2;
+  font-size: 12px;
+  height: 36px;
+}
+.account_dashboard .user_history table tr td {
+  color: #333333;
+  height: 45px;
+  font-size: 14px;
+}
+.account_dashboard .user_history table tr .viewbtn {
+  color: #1D2AA3;
+}
+
+.account_dashboard .bulkorder_upoload {
+  margin-top: 20px;
+  border: 2px solid #1D2AA3;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  height: 300px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  align-items: center;
+  background: #EFEFEF;
+}
+.account_dashboard .bulkorder_upoload .uploadlabel {
+  background: #1D2AA3;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 10px 25px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+.account_dashboard .bulkorder_upoload .uploadlabel:hover {
+  background: #19248d;
+}
+.account_dashboard .bulkorder_upoload .uploadlabel svg {
+  align-items: center;
+}
+.account_dashboard .bulkorder_upoload > p {
+  font-size: 14px;
+}
+
+.invoice_container {
+  width: 100%;
+}
+.invoice_container button {
+  border: 2px solid #1D2AA3;
+  color: #1D2AA3;
+  border-radius: 8px;
+  padding: 10px 20px;
+}
+.invoice_container .selected {
+  background: #1D2AA3;
+  color: white;
+}
+.invoice_container .searchinput {
+  border: 2px solid #1D2AA3;
+  border-radius: 8px;
+  height: 38px;
+  width: 250px;
+  padding-left: 10px;
+}
+.invoice_container .searchinput::-moz-placeholder {
+  color: #1D2AA3;
+}
+.invoice_container .searchinput::placeholder {
+  color: #1D2AA3;
+}
+.invoice_container > div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.invoice_container .invoicebtns button {
+  width: 40%;
+}
+.invoice_container .ordercount div {
+  background-color: #F2F2F2;
+  margin: 10px;
+  border-radius: 10px;
+  padding: 20px 40px;
+  text-align: center;
+  width: 20%;
+}
+.invoice_container table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  border-spacing: 0;
+  white-space: nowrap;
+}
+.invoice_container table .table-head {
+  color: #4D4D4D;
+  background: #F2F2F2;
+  font-size: 12px;
+  height: 36px;
+}
+.invoice_container table tr th {
+  padding: 0 5px;
+}
+.invoice_container table tr td {
+  color: #333333;
+  height: 45px;
+  font-size: 14px;
+  padding: 0 5px;
+}
+.invoice_container table tr .viewbtn {
+  color: #1D2AA3;
+}
+
+@media (max-width: 820px) {
+  .account_dashboard .navigation {
+    display: none;
+  }
+  .invoice_container {
+    margin: 20px;
+    max-width: 90%;
+  }
+  .invoice_container .searchinput {
+    width: 200px;
+    height: 100;
+  }
+  .invoice_container .ordercount div {
+    background-color: #F2F2F2;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 20px 40px;
+    text-align: center;
+    width: 18%;
+    font-size: 12px;
+  }
+}
+@media (max-width: 520px) {
+  .invoice_container {
+    margin: 20px;
+  }
+  .invoice_container .ordercount div {
+    background-color: #F2F2F2;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 20px 40px;
+    text-align: center;
+    width: 100%;
+    font-size: 12px;
+  }
+  .invoice_container .invoicebtns button {
+    width: 45%;
+  }
+}
+@media (max-width: 820px) {
+  .account_dashboard {
+    flex-direction: column;
+  }
+  .account_dashboard .navigation {
+    width: 95%;
+    margin: auto;
+  }
+  .account_dashboard .navigation .cevron-down {
+    display: block;
+  }
+  .account_dashboard .navigation .nav_head {
+    padding: 20px;
+    cursor: pointer;
+  }
+  .account_dashboard .navigation ul {
+    display: none;
+  }
+  .account_dashboard .account_details {
+    flex-direction: column;
+  }
+  .account_dashboard .account_details .namebox {
+    width: 85%;
+    display: flex;
+    margin: 10px auto;
+  }
+  .account_dashboard .account_details .billaddress {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+  }
+  .account_dashboard .user_history {
+    width: 85%;
+    margin: auto;
+  }
+  .account_dashboard .user_history table tr th {
+    padding: 0 10px;
+  }
+  .account_dashboard .user_history table tr td {
+    font-size: 12px;
+    padding: 0 10px;
+  }
+  .account_dashboard .user_history table tr .viewbtn {
+    color: #1D2AA3;
+    padding-left: 9px;
+  }
+  .account_dashboard .bulkorder_upoload {
+    height: 300px;
+    width: 80%;
+    margin-top: 50px;
+  }
+}/*# sourceMappingURL=profiledashboard.css.map */

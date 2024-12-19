@@ -1,0 +1,41 @@
+.color3 {
+  color: #1D2AA3;
+}
+
+.switchbox .switch {
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  height: 22px;
+  border-radius: 20px;
+  background: rgba(33, 33, 33, 0.0784313725);
+  transition: background 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  vertical-align: middle;
+  cursor: pointer;
+}
+.switchbox .switch::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 2px; /* Initial position for animation */
+  width: 25px;
+  height: 25px;
+  background: #fafafa;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* Shadow around handle */
+  transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1), background 0.28s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.switchbox .switch:active::before {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28), 0 0 0 20px rgba(128, 128, 128, 0.1);
+}
+.switchbox input:checked + .switch {
+  background: #737ee6;
+}
+.switchbox input:checked + .switch::before {
+  left: 25px;
+  background: #1D2AA3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+.switchbox input:checked + .switch:active::before {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28), 0 0 0 20px rgba(0, 150, 136, 0.2);
+}/*# sourceMappingURL=switch.css.map */

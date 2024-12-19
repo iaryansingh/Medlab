@@ -1,0 +1,30 @@
+.color3 {
+  color: #1D2AA3;
+}
+
+.orderplaced {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 300px;
+  margin: 30px auto;
+}
+.orderplaced .text_big {
+  font-size: 30px;
+  margin: 20px 0;
+  color: #1D2AA3;
+}
+.orderplaced .ordernumber {
+  color: #1D2AA3;
+  margin: 25px 0;
+}
+.orderplaced .check_btn {
+  border: none;
+  background: #1D2AA3;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: white;
+  margin-top: 20px;
+}/*# sourceMappingURL=modelbox.css.map */

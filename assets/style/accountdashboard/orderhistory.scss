@@ -1,0 +1,568 @@
+
+@import '../variables.scss';
+
+.orderhistory_contain{
+    // width: 95%;
+    padding: 20px;
+}
+
+.requestNewBtn{
+    display: flex;
+    justify-content: space-between;
+
+    button{
+        color: white;
+        background: $color3;
+        border-radius: 5px;
+        padding: 10px 20px;
+        border: none;
+
+        &:hover{
+            background: lighten($color3, 5%);
+        }
+    }
+}
+
+
+.order_list{
+    @include flex-row;
+    flex-direction: column;
+    margin: 20px auto;
+    box-shadow: $box-shadow;
+    padding: 20px;
+    border-radius: 10px;
+
+    sec-head{
+        margin-bottom: 20px;
+        color: black;
+    }
+   
+    table {
+        width: 100%; 
+        text-align: left;
+        border-collapse: collapse;
+        border-spacing: 0;
+        white-space: nowrap;
+    
+        .table-head {
+            color: #4D4D4D;
+            background: $grey2;
+            font-size: 12px;
+            height: 36px;
+        }
+    
+        tr {
+            th{
+                padding: 0 5px;
+               text-transform: uppercase;
+            }
+            td {
+                color: #333333;
+                height: 45px;
+                font-size: 14px;
+                padding: 0 5px;
+            }
+        }
+    }
+}
+
+@media(min-width: 1000px){
+    .orderhistory_contain{
+        width: 100%;
+    }  
+}
+
+
+//Order history details page
+.orderhistorydetail{
+
+    .head_btn{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        >button{
+            border: none;
+            background: $color3;
+            color: white;
+            border-radius: 5px;
+            padding: 10px 15px;
+
+            &:hover{
+                background: lighten($color3, 5%);
+            }
+        }
+    }
+
+    .order_detail{
+        margin: 30px auto 50px auto;
+
+        .sec1{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            padding: 10px;
+            border-bottom: 2px solid $grey2;
+            margin-bottom: 10px;
+            align-items: center;
+
+            sec-head{
+                color: black;
+            }
+
+            >a{
+                color: $color3;
+            }
+            
+            .prod_date{
+                margin-top: 5px;
+                span:nth-child(1){
+                    margin-right: 20px;
+                }
+            }
+        }
+    
+        .sec2{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+    
+            .addressTable {
+                border-collapse: collapse;
+                border-radius: 10px;
+                width: 60%;
+                margin: 10px;
+
+                .name{
+                    font-size: 14px;
+                }
+                .email, .phone{
+                    font-size: 14px;
+                    margin-top: 10px;
+
+                    >p:nth-child(1){
+                        color: $grey1;
+                    }
+                }
+
+                .email{
+                    margin-top: 50px;
+                }
+        
+                th, td {
+                    border: 1px solid $grey2;
+                    padding: 8px;
+                    text-align: left; 
+                }
+                th{
+                    color: $grey1;
+                }
+            }  
+    
+            .paymentTable{
+                width: 30%;
+                border: 2px solid $grey2;
+                margin: 10px;
+    
+                >div{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    border-bottom: 2px solid $grey2;
+                    padding: 15px;
+                }
+
+                .paymentTable-row{
+                    p:nth-child(1){
+                        color: $grey1;
+                    }
+                }
+            }
+        }
+    
+        .order_status{
+            margin: 50px auto;
+    
+            ul{
+                @include flex-row;
+                width: 100%;
+    
+                li{
+                    @include flex-col;
+                    width: 25%;
+    
+                    >div{
+                        @include flex-row;
+                        width: 100%;
+                        align-items: center;
+                        margin-bottom: 10px;
+    
+                        .status_circle{
+                            display: flex;
+                            flex-direction: column;
+                            margin: auto;
+                            justify-content: center;
+                            text-align: center;
+                            border: 2px solid $grey3;
+                            border-style: dotted;
+                            border-radius: 50px;
+                            padding: 15px;
+    
+                        }
+    
+                        .left_bar{
+                            width: 100%;
+                            height: 5px;
+                            background: $grey2;
+                        }
+        
+                        .right_bar{
+                            width: 100%;
+                            height: 5px;
+                            background: $grey2;
+                        }
+                    }
+                }
+    
+                >li:nth-child(1){
+                    text-align: center;
+                }
+                >li:nth-child(2){
+                    text-align: center;
+                }
+                >li:nth-child(3){
+                    text-align: center;
+                }
+                >li:nth-child(4){
+                    text-align: center;
+                }
+    
+                .done{
+                    >p{
+                        color: $color3;
+                    }
+                    >div{
+                        @include flex-row;
+                        width: 100%;
+                        align-items: center;
+    
+                        .status_circle{
+                            border: 2px solid $color3;
+                            color: white;
+                            background: $color3;
+                        }
+    
+                        .left_bar{
+                            background: $color3;
+                            height: 6px;
+                        }
+    
+                        .right_bar{
+                            background: $color3;
+                            height: 6px;
+                        }
+                    }
+                }
+            }
+        } 
+    
+        .orderItems{
+            table{
+                width: 100%;
+            }
+            .orderTable{
+                border-collapse: collapse;
+                border-radius: 10px;
+    
+                th, td {
+                    border: 1px solid $grey2;
+                    padding: 8px;
+                    text-align: left; 
+                }
+                th{
+                    color: $grey1;
+                    text-transform: uppercase;
+                    background-color: $grey2;
+                }
+    
+                td{
+                  img{
+                    width: 100px;
+                  }
+                }
+            }
+        }
+    } 
+} 
+
+
+@media(max-width: 1000px){
+
+}
+
+@media(max-width: 820px){
+
+    .orderhistorydetail{
+
+        .head_btn{
+    
+        }
+    
+        .order_detail{
+
+            .sec1{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 70%;
+                padding: 10px;
+                border-bottom: 2px solid $grey2;
+                margin-bottom: 10px;
+                align-items: center;
+            }    
+        
+            .sec2{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                font-size: 12px;
+        
+                .addressTable {
+        
+                }  
+        
+                .paymentTable{
+                
+                }
+            }
+        
+            .order_status{
+                margin: 50px auto;
+        
+                ul{
+                    @include flex-row;
+                    width: 100%;
+        
+                    li{
+                        @include flex-col;
+                        width: 25%;
+        
+                        >div{
+                            @include flex-row;
+                            width: 100%;
+                            align-items: center;
+                            margin-bottom: 10px;
+        
+                            .status_circle{
+                               
+                            }
+        
+                        }
+                    }
+                }
+            } 
+        
+            .orderItems{
+                table{
+                    width: 100%;
+                }
+                .orderTable{
+                    border-collapse: collapse;
+                    border-radius: 10px;
+        
+                    th, td {
+                        border: 1px solid $grey2;
+                        padding: 8px;
+                        text-align: left; 
+                    }
+                    th{
+                        color: $grey1;
+                        text-transform: uppercase;
+                        background-color: $grey2;
+                    }
+        
+                    td{
+                      img{
+                        width: 100px;
+                      }
+                    }
+                }
+            }
+    
+        }
+    
+       
+    } 
+   
+}
+
+@media(max-width: 520px){
+
+    .orderhistorydetail{
+
+        .head_btn{
+            margin: 15px
+        }
+    
+        .order_detail{
+            margin: 30px auto 50px auto;
+    
+            .sec1{
+                    font-size: 14px;    
+
+                    >a{
+                        display: none;
+                    }
+            }
+        
+            .sec2{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                flex-wrap: wrap;
+        
+                .addressTable {
+                    border-collapse: collapse;
+                    border-radius: 10px;
+                    width: 100%;
+                    margin: 10px;
+            
+                    th, td {
+                        border: 1px solid $grey2;
+                        padding: 8px;
+                        text-align: left; 
+                    }
+                    th{
+                        color: $grey1;
+                    }
+                }  
+        
+                .paymentTable{
+                    width: 100%;
+                    border: 2px solid $grey2;
+                    margin: 10px;
+        
+                    >div{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        border-bottom: 2px solid $grey2;
+                        padding: 15px;
+                    }
+                }
+            }
+        
+            .order_status{
+                margin: 50px auto;
+        
+                ul{
+                    @include flex-row;
+                    width: 100%;
+        
+                    li{
+                        @include flex-col;
+                        width: 25%;
+                        >p{
+                            font-size: 12px;
+                        }
+                        
+                        >div{
+                            @include flex-row;
+                            width: 100%;
+                            align-items: center;
+                            margin-bottom: 10px;
+        
+                            .status_circle{
+                                display: flex;
+                                flex-direction: column;
+                                margin: auto;
+                                justify-content: center;
+                                text-align: center;
+                                border: 2px solid $grey3;
+                                border-style: dotted;
+                                border-radius: 50px;
+                                padding: 10px;
+                                max-height: 38px;
+                                max-width: 38px;
+                                font-size: 9px;
+
+                                svg{
+                                    width: 12px;
+                                    height: 12px;
+                                }
+                            }
+        
+                            .left_bar{
+                                width: 100%;
+                                height: 5px;
+                                background: $grey2;
+                            }
+            
+                            .right_bar{
+                                width: 100%;
+                                height: 5px;
+                                background: $grey2;
+                            }
+                        }
+                    }
+        
+                    >li:nth-child(1){
+                        text-align: center;
+                    }
+                    >li:nth-child(2){
+                        text-align: center;
+                    }
+                    >li:nth-child(3){
+                        text-align: center;
+                    }
+                    >li:nth-child(4){
+                        text-align: center;
+                    }
+        
+                }
+            } 
+        
+            .orderItems{
+                table{
+                    width: 100%;
+                    font-size: 12px;
+                }
+                .orderTable{
+                    border-collapse: collapse;
+                    border-radius: 10px;
+        
+                    th, td {
+                        border: 1px solid $grey2;
+                        padding: 5px;
+                        text-align: left; 
+                        align-items: center;
+                    }
+                    th{
+                        color: $grey1;
+                        text-transform: uppercase;
+                        background-color: $grey2;
+                    }
+        
+                    td{
+                      img{
+                        width: 70px;
+                      }
+
+                      padding: 0 5px;
+
+                    }
+                }
+            }
+    
+        }
+    
+       
+    } 
+    
+}
+
+

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f8f8f8;
+    }
+
+    .product-details {
+      display: flex;
+      background: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      border-radius: 8px;
+      gap: 20px;
+    }
+
+    .product-gallery {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+
+    .arrow {
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: bold;
+      user-select: none;
+      color: #555;
+      padding: 5px;
+    }
+
+    .thumbnails-container {
+      overflow-y: hidden;
+      height: 240px;
+      width: 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      scroll-behavior: smooth;
+    }
+
+    .thumbnails {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .thumb {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border: 2px solid transparent;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: border-color 0.3s;
+    }
+
+    .thumb.selected {
+      border-color: #007bff;
+    }
+
+    .right-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 250px;
+      height: 250px;
+    }
+
+    #currentImage {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+<div class="product-details">
+  <div class="product-gallery">
+    <div class="arrow up-arrow">&#9650;</div>
+    <div class="thumbnails-container">
+      <div class="thumbnails">
+        <img src="./assets/img/products/product1.png" alt="gallery" class="thumb" data-large="assets/img/products/product1.png">
+        <img src="./assets/img/products/product2.png" alt="gallery" class="thumb" data-large="assets/img/products/product2.png">
+        <img src="./assets/img/products/product3.png" alt="gallery" class="thumb" data-large="assets/img/products/product3.png">
+        <img src="./assets/img/products/product1.png" alt="gallery" class="thumb" data-large="assets/img/products/product1.png">
+        <img src="./assets/img/products/product2.png" alt="gallery" class="thumb" data-large="assets/img/products/product2.png">
+        <img src="./assets/img/products/product3.png" alt="gallery" class="thumb" data-large="assets/img/products/product3.png">
+      </div>
+    </div>
+    <div class="arrow down-arrow">&#9660;</div>
+  </div>
+  <div class="right-image">
+    <img id="currentImage" src="assets/img/products/product1.png" alt="gallery">
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const thumbnailsContainer = document.querySelector(".thumbnails-container");
+    const thumbnails = document.querySelectorAll(".thumb");
+    const mainImage = document.getElementById("currentImage");
+    const upArrow = document.querySelector(".up-arrow");
+    const downArrow = document.querySelector(".down-arrow");
+
+    let currentIndex = 0; // Keep track of the current thumbnail index
+
+    // Function to update the main image and highlight the selected thumbnail
+    const updateMainImage = (index) => {
+      if (index >= 0 && index < thumbnails.length) {
+        currentIndex = index;
+
+        // Update the main image source
+        const selectedThumb = thumbnails[currentIndex];
+        mainImage.src = selectedThumb.getAttribute("data-large");
+
+        // Highlight the active thumbnail
+        thumbnails.forEach((thumb) => thumb.classList.remove("selected"));
+        selectedThumb.classList.add("selected");
+      }
+    };
+
+    // Mouse wheel scrolling functionality
+    thumbnailsContainer.addEventListener("wheel", (e) => {
+      e.preventDefault(); // Prevent default scrolling behavior
+
+      if (e.deltaY > 0) {
+        // Scroll down -> Show next thumbnail
+        if (currentIndex < thumbnails.length - 1) {
+          updateMainImage(currentIndex + 1);
+          thumbnailsContainer.scrollBy({ top: 80, behavior: "smooth" });
+        }
+      } else if (e.deltaY < 0) {
+        // Scroll up -> Show previous thumbnail
+        if (currentIndex > 0) {
+          updateMainImage(currentIndex - 1);
+          thumbnailsContainer.scrollBy({ top: -80, behavior: "smooth" });
+        }
+      }
+    });
+
+    // Arrow scrolling functionality
+    upArrow.addEventListener("click", () => {
+      if (currentIndex > 0) {
+        updateMainImage(currentIndex - 1);
+        thumbnailsContainer.scrollBy({ top: -80, behavior: "smooth" });
+      }
+    });
+
+    downArrow.addEventListener("click", () => {
+      if (currentIndex < thumbnails.length - 1) {
+        updateMainImage(currentIndex + 1);
+        thumbnailsContainer.scrollBy({ top: 80, behavior: "smooth" });
+      }
+    });
+
+    // Click functionality for thumbnails
+    thumbnails.forEach((thumb, index) => {
+      thumb.addEventListener("click", () => {
+        updateMainImage(index);
+      });
+    });
+
+    // Initialize the main image with the first thumbnail
+    updateMainImage(0);
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+.color3 {
+  color: #1D2AA3;
+}
+
+@font-face {
+  font-family: "RedHat";
+  src: url("../fonts/RedHatDisplay/RedHatDisplay-Regular.ttf");
+}
+select {
+  outline: none;
+  border-radius: 5px;
+  border: 2px solid #F2F2F2;
+  width: 100%;
+  height: 45px;
+  padding-left: 10px;
+  font-size: 14px;
+}
+input[type=checkbox], input[type=radio] {
+  cursor: pointer;
+}
+
+input:focus {
+  border-color: #1D2AA3;
+  outline: none;
+}
+
+input {
+  font-family: "RedHat";
+}
+
+input::-moz-placeholder {
+  font-family: "RedHat";
+}
+
+input::placeholder {
+  font-family: "RedHat";
+}
+
+textarea::-moz-placeholder {
+  font-family: "RedHat";
+}
+
+textarea::placeholder {
+  font-family: "RedHat";
+}
+
+textarea:focus {
+  border-color: #1D2AA3;
+  outline: none;
+}
+
+textarea {
+  border: 2px solid #E6E6E6;
+  border-radius: 5px;
+}
+
+.cust_input {
+  border: 2px solid #E6E6E6;
+  min-height: 40px;
+  width: 95%;
+  margin-right: auto;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+textarea {
+  font-size: 15px;
+}
+
+.input_group {
+  margin-bottom: 16px;
+  position: relative;
+  margin-right: auto;
+  width: 100%;
+  height: 52px;
+  display: flex;
+  flex-direction: column;
+}
+.input_group span {
+  font-size: 12px;
+  text-align: left;
+  color: rgb(232, 105, 14);
+}
+.input_group .showpassIcon {
+  color: #1D2AA3;
+  cursor: pointer;
+}
+.input_group .showpassIcon {
+  position: absolute;
+  left: 93%;
+  top: 10px;
+}
+.input_group input {
+  position: relative;
+  display: block;
+  width: calc(100% - 10px);
+  border: 1px solid #E6E6E6;
+  border-radius: 6px;
+  background-color: transparent;
+  margin: 0px auto;
+  min-height: 45px;
+  outline: none !important;
+  font-size: 16px;
+  padding-left: 10px;
+  transition: all 0.2s ease-in-out;
+}
+.input_group label {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  text-align: left;
+  display: inline-block;
+  padding: 0 4px;
+  height: 14px;
+  line-height: 14px;
+  font-size: 16px;
+  font-weight: 400;
+  background: #fff;
+  color: rgba(0, 0, 0, 0.5);
+  margin: 0px auto;
+  cursor: text;
+  transition: all 0.15s ease-in-out;
+}
+.input_group input:hover,
+.input_group input:focus {
+  border: 2px solid #1D2AA3;
+}
+.input_group input:valid + label,
+.input_group input:focus + label {
+  top: -6px;
+  color: #1D2AA3;
+}
+.input_group input:not(:-moz-placeholder-shown) + label {
+  top: -6px;
+  color: #1D2AA3;
+}
+.input_group input:not(:placeholder-shown) + label,
+.input_group input:focus + label {
+  top: -6px;
+  color: #1D2AA3;
+}
+.input_group .float_label {
+  background-color: inherit;
+  color: #1D2AA3;
+  padding: 0;
+  padding-left: 3px;
+}
+
+@media (max-width: 600px) {
+  .input_group .showpassIcon {
+    left: 90%;
+  }
+}
+.otp-input-fields {
+  max-width: 400px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px auto;
+}
+
+.otp-input-fields input {
+  height: 49px;
+  width: 49px;
+  color: #000;
+  border: 1px solid #E6E6E6;
+  text-align: center;
+  outline: none !important;
+  border-radius: 6px !important;
+  font-size: 1.2em;
+  padding: unset;
+  font-weight: 500;
+}
+.otp-input-fields input::-webkit-outer-spin-button, .otp-input-fields input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.otp-input-fields input[type=tel] {
+  -moz-appearance: textfield;
+}
+.otp-input-fields input:focus {
+  border-color: #1D2AA3;
+  font-size: 1.6em;
+}
+
+@media (max-width: 520px) {
+  .otp-input-fields input {
+    height: 40px;
+    width: 40px;
+  }
+}/*# sourceMappingURL=input.css.map */
